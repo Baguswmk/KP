@@ -1,0 +1,761 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;500;600;800&family=Roboto:wght@700&display=swap");
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: linear-gradient(#02754c, #00d88b);
+  --montserrat-font: "Montserrat", sans-serif;
+  --inter-font: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  background-image: var(--secondary-color);
+  font-family: var(--inter-font);
+  color: #fff;
+}
+
+.bg img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 1;
+  height: calc(100vh);
+  /* height: max-content; */
+  margin-left: 120px;
+}
+
+.wrapper {
+  margin: 10px;
+  border: 4px #fff solid;
+  border-radius: 8px;
+  height: 100vh;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 15% 75% 5%;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  background-color: #fff;
+  width: 105px;
+  height: 90px;
+  margin: 20px 10px 20px 30px;
+}
+
+.logo h1 {
+  font-family: "Roboto", "sans-serif";
+  font-size: 100px;
+  color: black;
+  margin-top: -15px;
+}
+
+.logo img {
+  margin-left: -20px;
+  margin-top: 5px;
+  width: 70px; /* Fix typo here: "70x" to "70px" */
+  height: 80px; /* Fix typo here: "80px" */
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  font-family: var(--montserrat-font);
+}
+
+.header-title h1 {
+  align-self: center;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.header-title h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+main {
+  margin: 15px 15px 0px 15px;
+}
+
+.hero-slogan {
+  margin-top: -30px;
+  width: 60%;
+  height: 30%;
+  margin-left: 13px;
+}
+
+.hero-slogan p {
+  font-size: 55px;
+  font-weight: 600;
+  margin-top: -15px;
+}
+
+.card-title {
+  border: 1px #000 solid;
+  background-color: #0265e6;
+  max-width: 380px;
+  text-align: center;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.card-title h1 {
+  font-size: 15px;
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+}
+
+.card-title h2 {
+  font-size: 18px;
+  font-family: var(--inter-font);
+  font-weight: 700;
+}
+
+.card-title h3 {
+  font-size: 18px;
+  font-family: var(--inter-font);
+  font-weight: 700;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 15px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 100%;
+  border: 1px #000 solid;
+  background-color: #fff;
+  color: black;
+}
+
+.card-content-title {
+  display: flex;
+  margin: 0px 30px 0px 30px;
+}
+
+.card-content-title p {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.card-content-title img {
+  width: 40px;
+  height: 40px;
+  margin-left: 3px;
+  margin-top: 10px;
+}
+
+.card-content-title h1 {
+  font-size: 15px;
+  font-family: var(--montserrat-font);
+  font-weight: 800;
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+
+.card-content-title .text-blur {
+  color: transparent;
+  text-shadow: 0 0 8px #000;
+  user-select: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.card-content-default {
+  display: flex;
+  margin: 5px 30px 5px 30px;
+}
+
+.card-content-default p {
+  color: #c8c8c8;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.card-content-default h2 {
+  color: #c8c8c8;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.card-content-core {
+  margin: 5px 30px -15px 30px;
+  display: grid;
+  grid-template-columns: 68% 30% 2%;
+  height: 40px;
+}
+
+.card-content-core p {
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.card-content-core p:hover {
+  color: #02754c;
+  transition: 0.1s all ease-in;
+}
+
+#clickCount {
+  text-align: right;
+  color: #02754c;
+}
+
+.card-content-core img {
+  z-index: 0;
+  width: 250px;
+  margin-top: -140px;
+  margin-left: -80px;
+}
+
+.img-supri img {
+  position: absolute;
+  width: 500px;
+  height: 700px;
+  z-index: 1;
+  top: 50px;
+  right: 30px;
+}
+
+/* Overlay */
+
+/* Styling untuk overlay dan popup */
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(172, 166, 166, 0.9);
+  z-index: 9999;
+}
+
+.popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: black;
+}
+
+.popup h1 {
+  font-size: 30px;
+  font-family: var(--montserrat-font);
+  font-weight: 700;
+}
+
+.popup-content img {
+  width: 50px;
+  height: 70px;
+  margin-bottom: -20px;
+}
+
+.popup-button {
+  width: 300px;
+  height: 49px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, #02754c, #008d5b, #00a56b, #00be7b, #00d88b);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: var(--montserrat-font);
+  cursor: pointer;
+  margin: 0 50px 0 50px;
+}
+
+.popup-button:hover {
+  text-decoration: underline;
+}
+
+/* Mengatur tampilan popup menjadi sembunyi */
+.popup.hidden {
+  display: none;
+}
+
+/* Untuk perangkat ponsel */
+@media (min-width: 320px) and (max-width: 575px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+  main {
+    display: flex;
+    flex-direction: column; /* Arrange elements in a column */
+  }
+  header {
+    grid-template-columns: 15% 75% 5%;
+  }
+  .login-vote {
+    margin-top: 20px;
+    margin-left: -8px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .wrapper {
+    height: calc(100vh - 20px);
+  }
+
+  .bg img {
+    margin: 0;
+  }
+
+  .logo {
+    margin-left: -200px;
+  }
+  .logo img {
+    margin-left: 150px;
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+  }
+  .header-title {
+    margin-bottom: 0;
+  }
+  .header-title h1 {
+    font-size: 14px;
+  }
+  .header-title h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .hero-slogan {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 60% 40%;
+    margin-top: 20px;
+    width: 100%;
+    order: 2;
+  }
+  .hero-slogan p {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .hero-slogan .text {
+    flex-direction: column;
+  }
+  .img-supri img {
+    position: sticky;
+    width: 100px;
+    height: 150px;
+    margin-right: -30px;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  .card {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .card-hidden {
+    display: none;
+  }
+  .card-content-title {
+    width: 90%;
+  }
+  .card-content-title p {
+    margin-top: 17px;
+  }
+  .card-content-title h1 {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  .card-content-title .text-blur {
+    margin-top: 20px;
+  }
+
+  .card-title {
+    margin: 0;
+    max-width: 100%;
+  }
+  .card-content-core {
+    grid-template-columns: 90% 8% 2%;
+  }
+
+  .card-content-core img {
+    width: 100px;
+    margin-left: -20px;
+    margin-top: -45px;
+  }
+  .card-content-core p {
+    font-size: 14px;
+    width: 100%;
+  }
+  .popup {
+    margin: 10px;
+    background-color: #fff;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: black;
+  }
+
+  .popup h1 {
+    font-size: 15px;
+  }
+  .popup-content {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+  }
+  .popup-content img {
+    width: 30px;
+    height: 50px;
+    margin-bottom: -20px;
+    margin-left: 15px;
+  }
+
+  .popup-button {
+    font-size: 15px;
+    width: 100px;
+    height: 49px;
+    margin: 0 0 0 30px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  /* CSS untuk layar dengan lebar antara 576px dan 767px */
+  .bg img {
+    margin: 0;
+  }
+  header {
+    grid-template-columns: 15% 75% 10%;
+  }
+  .login-vote {
+    margin-top: 30px;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .header-title h1 {
+    font-size: 18px;
+  }
+  .header-title h2 {
+    font-size: 20px;
+  }
+  .hero-slogan {
+    margin-top: 0;
+    order: unset;
+  }
+  .hero-slogan p {
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  .hero-slogan {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 60% 40%;
+  }
+
+  .hero-slogan .text {
+    flex-direction: column;
+  }
+  .img-supri img {
+    position: sticky;
+    width: 200px;
+    height: 250px;
+    margin-right: -30px;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  .card-title {
+    margin: 45px auto 0 auto;
+    max-width: 70%;
+  }
+  .card-content-core img {
+    z-index: 0;
+    width: 100px;
+    margin-top: -50px;
+    margin-left: 30px;
+  }
+  .card-content-core {
+    grid-template-columns: 75% 30% 2%;
+  }
+  .card-hidden {
+    display: none;
+  }
+}
+
+/* Untuk perangkat tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* CSS untuk layar dengan lebar antara 768px dan 991px */
+
+  .bg {
+    margin: 0;
+  }
+  header {
+    grid-template-columns: 15% 75% 10%;
+  }
+  .login-vote {
+    margin-top: 30px;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .hero-slogan {
+    height: 250px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .hero-slogan p {
+    margin-top: 15px;
+    font-size: 50px;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  .card-title {
+    margin: 20px auto 0 auto;
+    max-width: 70%;
+  }
+  .hero-slogan {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 60% 40%;
+  }
+
+  .hero-slogan .text {
+    flex-direction: column;
+  }
+  .img-supri img {
+    position: sticky;
+    width: 200px;
+    height: 250px;
+    margin-right: -30px;
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1199px) {
+  /* CSS untuk layar dengan lebar antara 1020px dan 1199px */
+  /* main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  } */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  .card {
+    width: 95%;
+    margin-left: 15px;
+  }
+
+  .card-title {
+    margin-top: 20px;
+    max-width: 46.8%;
+  }
+
+  .hero-slogan p {
+    font-size: 55px;
+  }
+}
+
+/* Untuk perangkat laptop */
+@media (min-width: 992px) and (max-width: 1019px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+  .card {
+    width: 95%;
+    margin-left: 15px;
+  }
+  .card-title {
+    margin-top: 20px;
+    max-width: 46.8%;
+  }
+  .login-card-right {
+    margin-left: 50px;
+  }
+  .login-card-left {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1227px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+  body {
+    font-size: 18px;
+  }
+
+  header {
+    margin-top: 20px;
+  }
+
+  .hero-slogan {
+    margin-top: 20px;
+  }
+
+  .hero-slogan p {
+    font-size: 76px;
+  }
+
+  .img-supri img {
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    z-index: 1;
+    top: 60px;
+    right: 0px;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  .card {
+    width: 90%;
+    margin-left: 15px;
+  }
+
+  .card-title {
+    margin-top: 50px;
+    max-width: 44.4%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1228px) and (max-width: 1440px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+  header {
+    margin-top: 20px;
+  }
+
+  .hero-slogan p {
+    font-size: 80px;
+  }
+
+  .img-supri img {
+    position: absolute;
+    width: 600px;
+    height: 900px;
+    z-index: 1;
+    top: 5px;
+    right: 30px;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  .card {
+    width: 90%;
+    margin-left: 15px;
+  }
+
+  .card-title {
+    margin-top: 40px;
+    max-width: 29.2%;
+  }
+
+  .hero-slogan p {
+    font-size: 76px;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .card-title {
+    margin-top: 40px;
+    max-width: 29.35%;
+  }
+
+  .hero-slogan p {
+    font-size: 80px;
+  }
+  .card {
+    width: 90%;
+    margin-left: 15px;
+    max-height: 280px;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    height: calc(100vh - 420px);
+  }
+  .img-supri img {
+    position: absolute;
+    width: 600px;
+    height: 900px;
+    z-index: 1;
+    top: 50px;
+    right: 150px;
+  }
+}
