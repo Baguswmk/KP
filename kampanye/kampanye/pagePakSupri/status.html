@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Status Connections</title>
+$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<link rel="stylesheet" href="login-page.css">
+<link rel="stylesheet" href="style.css">
+<script language="JavaScript">
+	<!--	
+	$(if advert-pending == 'yes')
+		var popup = '';
+		function focusAdvert() {
+		if (window.focus) popup.focus();
+		}
+		function openAdvert() {
+		popup = open('$(link-advert)', 'hotspot_advert', '');
+		setTimeout("focusAdvert()", 1000);
+		}
+	$(endif)
+		function openLogout() {
+		if (window.name != 'hotspot_status') return true;
+			open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+		window.close();
+		return false;
+		}
+	//-->
+	</script>
+	
+</head>
+<body bottommargin="0" topmargin="0" leftmargin="0" rightmargin="0"
+$(if advert-pending == 'yes')
+	onLoad="openAdvert()"
+$(endif)
+>
+<div class="bg">
+	<img  src="img/bg.png" alt="">
+</div>
+
+<div class="login-wrapper">
+<header class="login-page"> 
+		<img class="login-logo"   src="img/logo-PKB.png" alt="Partai Kebangkitan Bangsa">
+	<div class="login-header-title">
+		<h2>Free Wifi</h2>
+		<h2>Partai Kebangkitan Bangsa</h2>
+	</div>
+	<img class="login-vote" src="img/vote-img.png" alt="vote-img">
+</header>
+<main>
+	<div class="login-hero">
+		<h1>Anda Telah Login !</h1>
+	</div>
+<div class="login-card-container"> 
+	<div class="login-card-left">
+		<div class="login-card-header">
+			<h1>DAERAH PEMILIHAN</h1>
+			<h2>DPRD PROVINSI LAMPUNG</h2>
+			<!-- <h2>PROVINSI</h2> -->
+		</div>
+		<div class="card-content-title">
+			<P>1</P>
+			<img src="img/logo-PKB.png" alt="Partai Kebangkitan Bangsa">
+			<h1>Partai Kebangkitan Bangsa</h1>
+		</div>
+		<div class="line"></div>
+		<div class="login-card-content">
+			<div class="login-card-content-default">
+				<p>1.</p>
+				<h2>Nama</h2>
+			</div>
+			<div class="line"></div>
+			<div class="login-card-content-default">
+				<p>2. Nama</p>
+			</div>
+			<div class="line"></div>
+			<div class="login-card-content-default">
+				<p>3. Nama</p>
+			</div>
+			<div class="line"></div>
+			<div class="login-card-content-default">
+				<p>4. Nama</p>
+			</div>
+			<div class="line"></div>
+			<div class="login-card-content-core">
+				<p >5. Supriyanto, S.T.</p>
+				<img src="img/paku.png" alt="">
+			</div>
+			<div class="line"></div>
+			<div class="login-card-content-default">
+				<p>6. Nama</p>
+			</div>
+			<div class="line"></div>
+			<div class="login-card-content-default">
+				<p>7.</p>
+				<h2>Nama</h2>
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+	
+</div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

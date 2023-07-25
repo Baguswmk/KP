@@ -1,377 +1,345 @@
 /* login-page */
 
-.login-wrapper {
-  margin: 10px;
-  border: 4px #fff solid;
-  border-radius: 8px;
-  height: 100vh;
-}
-.login-page {
-  display: grid;
-  grid-template-columns: 30% 40% 30%;
-  margin: 0 auto;
-}
 
-.login-header-title {
-  font-size: 20px;
-  text-align: center;
-  font-weight: 700;
-  font-family: var(--montserrat-font);
-}
-
-.login-page .login-logo {
-  width: 80px;
-  height: 87px;
-  margin: 5px 20px;
-}
-
-.login-page .login-vote {
-  width: 80px;
-  height: 87px;
-  margin-left: auto;
-  margin-right: 20px;
-  margin-top: 5px;
-}
-
-.login-hero {
-  text-align: center;
-  margin-top: 0;
-}
-
-.login-hero h1 {
-  font-size: 30px;
-  font-family: var(--montserrat-font);
-  font-weight: 700;
-  margin-top: -15px;
-}
-
-.login-card-container {
-  display: flex;
-  width: 100%;
-  /* display: grid;
+  .login-wrapper{
+    overflow: hidden;
+    margin: 10px;
+    border: 4px #fff solid;
+    border-radius: 8px;
+    max-height: calc(100vh - 15px);
+    overflow-y: auto;
+  }
+  .login-page {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    margin: 0 auto;
+  }
+  
+  .login-header-title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-family: var(--montserrat-font);
+  }
+  
+  .login-page .login-logo {
+    width: 80px;
+    height: 87px;
+    margin: 5px 20px;
+  }
+  
+  .login-page .login-vote {
+    width: 80px;
+    height: 87px;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 5px;
+  }
+  
+  .login-hero {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .login-hero h1 {
+    font-size: 30px;
+    font-family: var(--montserrat-font);
+    font-weight: 700;
+    margin-top: -15px;
+  }
+  
+  .login-card-container {
+    display:flex;
+    width: 100%;
+    /* display: grid;
     grid-template-columns: 1fr auto 1fr; */
-  justify-self: center;
-  margin: 20px auto;
-}
+    justify-self: center;
+    margin: 20px auto;
+  }
+  
+  .vertical-line {
+    width: 8px;
+    height: 370px;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+  
+  .login-card-right,
+  .login-card-left {
+    width: 700px;
+    height: calc(100vh - 200px);
+    border: 1px #000 solid;
+    background-color: #fff;
+    color: black;
+    margin : 0 auto;
 
-.vertical-line {
-  width: 8px;
-  height: 370px;
-  border-radius: 4px;
-  background-color: #ffffff;
-}
-
-.login-card-right,
-.login-card-left {
-  width: 700px;
-  height: calc(100vh - 200px);
-  border: 1px #000 solid;
-  background-color: #fff;
-  color: black;
-  margin: 0 auto;
-}
-
-.login-card-right {
-  margin-top: 50px;
-  max-height: 280px;
-}
-.login-card-content-default {
-  display: flex;
-  margin: 10px 30px 5px 30px;
-}
-
-.login-card-content-default p {
-  color: #c8c8c8;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-.login-card-content-default h2 {
-  color: #c8c8c8;
-  font-weight: bold;
-  font-size: 15px;
-  margin-left: 5px;
-}
-
-.login-card-content-core {
-  margin: 10px 30px -5px 30px;
-  display: grid;
-  grid-template-columns: 68% 30% 2%;
-  height: 40px;
-}
-
-.login-card-content-core p {
-  font-weight: bold;
-  font-size: 17px;
-  cursor: pointer;
-  user-select: none;
-}
-
-.login-card-content-core p:hover {
-  color: #02754c;
-  transition: 0.1s all ease-in;
-}
-
-#clickCount {
-  text-align: right;
-  color: #02754c;
-}
-
-.login-card-content-core img {
-  z-index: 0;
-  width: 250px;
-  margin-top: -140px;
-  margin-left: -80px;
-}
-.login-card-header,
-.card-info,
-.card-desk {
-  margin: 10px;
-  border: 1px #000 solid;
-}
-
-.login-card-header {
-  padding: 10px 0 10px 0;
-  text-align: center;
-  background-color: #0265e6;
-}
-
-.login-card-header h1 {
-  font-size: 15px;
-  font-weight: 400;
-  font-family: var(--inter-font);
-  color: #fff;
-}
-
-.login-card-header h2 {
-  font-size: 32px;
-  font-weight: 700;
-  font-family: var(--inter-font);
-  color: #fff;
-}
-
-.card-desk {
-  text-align: center;
-}
-
-.card-desk h1 {
-  margin: 10px 0 10px 0;
-  font-size: 10px;
-  font-weight: 700;
-  font-family: var(--inter-font);
-}
-
-.info,
-.info-ttd {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.info p {
-  font-weight: 700;
-  font-size: 10px;
-  text-align: left;
-  margin-left: 19px;
-  margin-bottom: 10px;
-  font-family: var(--inter-font);
-}
-
-.info-ttd p {
-  margin-top: 40px;
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 10px;
-  text-align: left;
-  margin-left: 19px;
-  font-family: var(--inter-font);
-}
+  }
+  
+  .login-card-right {
+    margin-top: 50px;
+    max-height: 280px;
+  }
+  .login-card-content-default {
+    display: flex;
+    margin: 10px 30px 5px 30px;
+  }
+  
+  .login-card-content-default p {
+    color: #c8c8c8;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  .login-card-content-default h2 {
+    color: #c8c8c8;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  
+  .login-card-content-core {
+    margin: 10px 30px -5px 30px;
+    display: grid;
+    grid-template-columns: 68% 30% 2%;
+    height: 40px;
+  }
+  
+  .login-card-content-core p {
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .login-card-content-core p:hover {
+    color: #02754c;
+    transition: 0.1s all ease-in;
+  }
+  
+  #clickCount {
+    text-align: right;
+    color: #02754c;
+  }
+  
+  .login-card-content-core img {
+    z-index: 0;
+    width: 250px;
+    margin-top: -140px;
+    margin-left: -80px;
+  }
+  .login-card-header,
+  .card-info,
+  .card-desk {
+    margin: 10px;
+    border: 1px #000 solid;
+  }
+  
+  .login-card-header {
+    padding: 10px 0 10px 0;
+    text-align: center;
+    background-color: #0265e6;
+  }
+  
+  .login-card-header h1 {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: var(--inter-font);
+    color: #fff;
+  }
+  
+  .login-card-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: var(--inter-font);
+    color: #fff;
+  }
+  
+  .card-desk {
+    text-align: center;
+  }
+  
+  .card-desk h1 {
+    margin: 10px 0 10px 0;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: var(--inter-font);
+  }
+  
+  .info,
+  .info-ttd {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  
+  .info p {
+    font-weight: 700;
+    font-size: 10px;
+    text-align: left;
+    margin-left: 19px;
+    margin-bottom: 10px;
+    font-family: var(--inter-font);
+  }
+  
+  .info-ttd p {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 10px;
+    text-align: left;
+    margin-left: 19px;
+    font-family: var(--inter-font);
+  }
 
 /* Untuk perangkat ponsel */
 @media (min-width: 320px) and (max-width: 575px) {
-  body {
-    height: calc(100vh);
-  }
-  .login-wrapper {
-    height: 100vh;
-  }
+body{
+  height: calc(100vh);
 
-  .login-page {
-    grid-template-columns: 15% 70% 15%;
-  }
-  .login-page .login-logo,
-  .login-page .login-vote {
-    width: 40px;
-    height: 47px;
-  }
-  .login-header-title {
-    margin-top: 50px;
-    margin-bottom: 10px;
-  }
-  .login-header-title h2 {
-    font-size: 16px;
-  }
-
-  .login-hero h1 {
-    font-size: 18px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
-  .login-card-left {
-    max-width: 270px;
-    margin: 10px auto;
-    height: calc(100vh - 300px);
-  }
-
-  .login-card-container {
-    grid-template-columns: 1fr;
-    margin: 10px auto;
-  }
-  .vertical-line {
-    width: 250px;
-    height: 5px;
-    margin: 30px auto 0 auto;
-  }
-  .info p,
-  .card-desk h1,
-  .info-ttd p {
-    font-size: 8px;
-  }
-  .card-content-title h1 {
-    font-size: 10px;
-  }
-  .login-card-header h2 {
-    font-size: 17px;
-  }
-  .login-card-content-core {
-    grid-template-columns: 75% 25%;
-  }
-  .login-card-content-core img {
-    width: 100px;
-    margin-top: -45px;
-    margin-left: -10px;
-  }
-  .login-card-content-core p {
-    font-size: 16px;
-  }
 }
-@media (min-width: 576px) and (max-width: 767px) {
-  .login-page {
-    grid-template-columns: 15% 70% 15%;
-  }
-
-  .login-hero h1 {
-    font-size: 17px;
-  }
-
-  .login-card-container {
-    grid-template-columns: 1fr;
-  }
-  .login-header-title {
-    margin-top: 10px;
-    font-size: 15px;
-  }
-  .login-card-header h2 {
-    font-size: 20px;
-  }
-  .vertical-line {
-    width: 450px;
-    height: 5px;
-    margin: 10px auto;
-  }
-  .login-card-left {
-    width: 80%;
-    margin: 10px auto;
-    max-height: 400px;
-  }
-  .login-card-container {
-    height: 600px;
-  }
+.login-wrapper{
+  height: 100vh;
 }
-
-/* Untuk perangkat tablet */
-@media (min-width: 768px) and (max-width: 991px) {
-  .login-page {
-    grid-template-columns: 20% 60% 20%;
+  
+    .login-page {
+      grid-template-columns: 15% 70% 15%;
+    }
+    .login-page .login-logo,
+    .login-page .login-vote {
+      width: 40px;
+      height: 47px;
+    }
+    .login-header-title {
+      margin-top: 50px;
+      margin-bottom: 10px;
+    }
+    .login-header-title h2 {
+      font-size: 16px;
+    }
+  
+    .login-hero h1 {
+      font-size: 18px;
+      margin-top : 30px;
+      margin-bottom: 20px;
+    }
+    .login-card-left {
+      max-width: 270px;
+      margin: 10px auto;
+      height: calc(100vh - 500px);
+    }
+  
+    .login-card-container {
+      grid-template-columns: 1fr;
+      margin: 10px auto;
+    }
+    .vertical-line {
+      width: 250px;
+      height: 5px;
+      margin: 30px auto 0 auto;
+    }
+    .info p,
+    .card-desk h1,
+    .info-ttd p {
+      font-size: 8px;
+    }
+    .card-content-title h1 {
+      font-size: 10px;
+    }
+    .login-card-header h2 {
+      font-size: 17px;
+    }
+    .login-card-content-core{
+      grid-template-columns: 75% 25%;
+    }
+    .login-card-content-core img{
+      width: 100px;
+      margin-top: -45px;
+      margin-left: -10px;
+    }
+    .login-card-content-core p{
+      font-size:16px;
+    }
   }
-
-  .login-hero h1 {
-    font-size: 40px; /* Atur ukuran font agar sesuai pada perangkat ponsel */
+  @media (min-width: 576px) and (max-width: 767px) {
+    .login-page {
+      grid-template-columns: 20% 60% 20%;
+    }
+  
+    .login-hero h1 {
+      font-size: 40px; /* Atur ukuran font agar sesuai pada perangkat ponsel */
+    }
+  
+    .login-card-container {
+      grid-template-columns: 1fr;
+      margin: 10px auto;
+    }
+    .login-header-title {
+      margin-top: 10px;
+    }
+    .vertical-line {
+      width: 450px;
+      height: 5px;
+      margin: 10px auto;
+    }
+    .login-card-right,
+    .login-card-left {
+      width: 80%;
+      margin: 0 auto; /* Gunakan margin auto untuk mengatasi posisi di tengah */
+    }
   }
-
-  .login-card-container {
-    grid-template-columns: 1fr;
-    margin: 10px auto;
+  
+  /* Untuk perangkat tablet */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .login-page {
+      grid-template-columns: 20% 60% 20%;
+    }
+  
+    .login-hero h1 {
+      font-size: 40px; /* Atur ukuran font agar sesuai pada perangkat ponsel */
+    }
+  
+    .login-card-container {
+      grid-template-columns: 1fr;
+      margin: 10px auto;
+    }
+    .login-header-title {
+      margin-top: 10px;
+    }
+    .vertical-line {
+      width: 450px;
+      height: 5px;
+      margin: 10px auto;
+    }
+    .login-card-right,
+    .login-card-left {
+      width: 80%;
+      margin: 0 auto; /* Gunakan margin auto untuk mengatasi posisi di tengah */
+    }
   }
-  .login-header-title {
-    margin-top: 10px;
+  
+  @media (min-width: 1020px) and (max-width: 1199px) {
+    .login-card-right {
+      margin-left: 50px;
+    }
+    .login-card-left {
+      margin-left: 20px;
+    }
   }
-  .vertical-line {
-    width: 450px;
-    height: 5px;
-    margin: 10px auto;
+  
+  /* Untuk perangkat laptop */
+  @media (min-width: 992px) and (max-width: 1019px) {
+    .login-card-right {
+      margin-left: 50px;
+    }
+    .login-card-left {
+      margin-left: 20px;
+    }
   }
-  .login-card-left {
-    width: 80%;
-    margin: 10px auto;
-    max-height: 420px;
+  
+  @media (min-width: 1200px) and (max-width: 1227px) {
   }
-  .login-card-container {
-    height: 600px;
+  
+  /* Desktop */
+  @media (min-width: 1228px) and (max-width: 1440px) {
   }
-}
-
-@media (min-width: 1020px) and (max-width: 1199px) {
-  .login-card-left {
-    width: 60%;
-    margin: 10px auto;
-    max-height: 420px;
+  @media (min-width: 1441px) and (max-width: 1920px) {
   }
-  .login-card-container {
-    height: 600px;
-  }
-}
-
-/* Untuk perangkat laptop */
-@media (min-width: 992px) and (max-width: 1019px) {
-  .login-card-left {
-    width: 60%;
-    margin: 10px auto;
-    max-height: 420px;
-  }
-  .login-card-container {
-    height: 600px;
-  }
-}
-
-@media (min-width: 1200px) and (max-width: 1227px) {
-  .login-card-left {
-    width: 60%;
-    margin: 10px auto;
-    max-height: 420px;
-  }
-  .login-card-container {
-    height: 600px;
-  }
-}
-
-/* Desktop */
-@media (min-width: 1228px) and (max-width: 1440px) {
-  .login-card-left {
-    width: 60%;
-    margin: 10px auto;
-    max-height: 420px;
-  }
-  .login-card-container {
-    height: 600px;
-  }
-}
-@media (min-width: 1441px) and (max-width: 1920px) {
-  .login-card-left {
-    width: 60%;
-    margin: 10px auto;
-    max-height: 420px;
-  }
-  .login-card-container {
-    height: 600px;
-  }
-}

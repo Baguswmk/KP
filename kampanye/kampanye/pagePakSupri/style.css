@@ -24,15 +24,17 @@ body {
   color: #fff;
 }
 
-.bg img {
-  width: 100%;
+.bg {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   opacity: 1;
-  height: calc(100vh);
-  /* height: max-content; */
+}
+
+.bg img {
+  width: 100%;
+  height: max-content;
   margin-left: 120px;
 }
 
@@ -41,11 +43,12 @@ body {
   border: 4px #fff solid;
   border-radius: 8px;
   height: 100vh;
+  overflow-y: auto;
 }
 
 header {
   display: grid;
-  grid-template-columns: 15% 75% 5%;
+  grid-template-columns: 15% 75%;
   margin: 0 auto;
 }
 
@@ -203,7 +206,7 @@ main {
 .card-content-default h2 {
   color: #c8c8c8;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 15px;
   margin-left: 5px;
 }
 
@@ -263,6 +266,7 @@ main {
   z-index: 9999;
 }
 
+
 .popup {
   background-color: #fff;
   padding: 20px;
@@ -306,6 +310,92 @@ main {
   display: none;
 }
 
+/* login-popup */
+.login-popup {
+  background-image: linear-gradient(to bottom, #02754c, #008d5b, #00a56b, #00be7b, #00d88b);
+  padding: 20px;
+  width: 450px;
+  height: 320px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+}
+
+.login-popup-content h1{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.login-popup-content h2{
+  font-size: 18px;
+  margin-bottom: 5px;
+
+}
+.wrapper-form-popup{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+}
+.username, .password{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.username label, .password label{
+  font-size: 15px;
+  margin: 0 auto;
+  width: 55%;
+  text-align: left;
+
+}
+#username, #password{
+  width: 55%;
+  margin: 0 auto;
+  padding: 5px;
+}
+.login-note{
+  font-size:12px;
+  color: black;
+  text-align: left;
+  
+}
+.login-popup-button{
+  margin: 10px auto;
+  width:30%;
+  padding: 5px;
+  background-image: radial-gradient(circle, #c5c5c5, #c9c8cd, #cdcbd4, #d1cfdc, #d5d2e4);
+  color: black;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-popup-button:hover{
+  text-decoration: underline;
+}
+.popup-close{
+  display: flex;
+  float: right;
+  padding: 0px 2px 0px 2px;
+  color:  black;
+}
+
+.popup-close:hover{
+  background-color: #02754c;
+  padding: 1px 0px 0px 3.3px;
+  width: 17px;
+  height: 20px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: all ease-in-out 0.2s;
+}
+
+
+
 /* Untuk perangkat ponsel */
 @media (min-width: 320px) and (max-width: 575px) {
   html,
@@ -315,15 +405,6 @@ main {
   main {
     display: flex;
     flex-direction: column; /* Arrange elements in a column */
-  }
-  header {
-    grid-template-columns: 15% 75% 5%;
-  }
-  .login-vote {
-    margin-top: 20px;
-    margin-left: -8px;
-    width: 40px;
-    height: 40px;
   }
 
   .wrapper {
@@ -338,7 +419,7 @@ main {
     margin-left: -200px;
   }
   .logo img {
-    margin-left: 150px;
+    margin-left: 160px;
     margin-top: 5px;
     width: 50px;
     height: 50px;
@@ -357,7 +438,7 @@ main {
     display: grid;
     width: 100%;
     grid-template-columns: 60% 40%;
-    margin-top: 20px;
+    margin-top: 50px;
     width: 100%;
     order: 2;
   }
@@ -380,12 +461,12 @@ main {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
-    width: 100%;
   }
   .card {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-bottom: 20px;
   }
   .card-hidden {
     display: none;
@@ -410,7 +491,7 @@ main {
     max-width: 100%;
   }
   .card-content-core {
-    grid-template-columns: 90% 8% 2%;
+    grid-template-columns: 80% 20% 2%;
   }
 
   .card-content-core img {
@@ -419,7 +500,7 @@ main {
     margin-top: -45px;
   }
   .card-content-core p {
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
   }
   .popup {
@@ -455,19 +536,14 @@ main {
 }
 @media (min-width: 576px) and (max-width: 767px) {
   /* CSS untuk layar dengan lebar antara 576px dan 767px */
+  html,
+  body {
+    overflow: scroll;
+  }
+
   .bg img {
     margin: 0;
   }
-  header {
-    grid-template-columns: 15% 75% 10%;
-  }
-  .login-vote {
-    margin-top: 30px;
-    margin-left: -40px;
-    width: 80px;
-    height: 80px;
-  }
-
   .header-title h1 {
     font-size: 18px;
   }
@@ -512,35 +588,13 @@ main {
     margin: 45px auto 0 auto;
     max-width: 70%;
   }
-  .card-content-core img {
-    z-index: 0;
-    width: 100px;
-    margin-top: -50px;
-    margin-left: 30px;
-  }
-  .card-content-core {
-    grid-template-columns: 75% 30% 2%;
-  }
-  .card-hidden {
-    display: none;
-  }
 }
 
 /* Untuk perangkat tablet */
 @media (min-width: 768px) and (max-width: 991px) {
   /* CSS untuk layar dengan lebar antara 768px dan 991px */
-
   .bg {
     margin: 0;
-  }
-  header {
-    grid-template-columns: 15% 75% 10%;
-  }
-  .login-vote {
-    margin-top: 30px;
-    margin-left: -40px;
-    width: 80px;
-    height: 80px;
   }
 
   .hero-slogan {
